@@ -160,6 +160,48 @@ class ProfilePage extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
+                  // CARD RIWAYAT PENDIDIKAN
+                  Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(12),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Riwayat Pendidikan',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          SizedBox(height: 10),
+
+                          InfoTile(
+                            icon: Icons.school,
+                            label: 'Perguruan Tinggi',
+                            value: 'Institut Teknologi dan Bisnis Bina Sarana Global',
+                          ),
+
+                          InfoTile(
+                            icon: Icons.menu_book,
+                            label: 'Program Studi',
+                            value: 'Teknik Informatika Software Engineering',
+                          ),
+
+                          InfoTile(
+                            icon: Icons.calendar_month,
+                            label: 'Tahun Akademik',
+                            value: '2026–2027',
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+
                 // CARD KEAHLIAN DAN HOBI
                 Card(
                   child: Padding(
