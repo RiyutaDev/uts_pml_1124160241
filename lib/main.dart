@@ -191,8 +191,8 @@ class ProfilePage extends StatelessWidget {
 
                           InfoTile(
                             icon: Icons.calendar_month,
-                            label: 'Tahun Akademik',
-                            value: '2026–2027',
+                            label: 'Tahun Masuk',
+                            value: '2024 - Sekarang',
                           ),
                         ],
                       ),
