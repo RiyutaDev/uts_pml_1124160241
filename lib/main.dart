@@ -9,6 +9,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp();
+    
+      return MaterialApp(
+        title: 'Profil Rizki Riana Putra',
+
+        debugShowCheckedModeBanner: false,
+
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.teal,
+          ),
+        ),
+
+        darkTheme: ThemeData(
+          brightness: Brightness.dark,
+          useMaterial3: true,
+        ),
+
+        themeMode: ThemeMode.system,
+      );
+
   }
 }
