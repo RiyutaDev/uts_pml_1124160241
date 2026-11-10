@@ -172,6 +172,23 @@ class ProfilePage extends StatelessWidget {
 
                         SizedBox(height: 10),
 
+                        InfoTile(
+                          icon: Icons.code,
+                          label: 'Keahlian',
+                          value: 'Pemrograman Flutter dan Dart',
+                        ),
+
+                        InfoTile(
+                          icon: Icons.web,
+                          label: 'Pengembangan Web',
+                          value: 'PHP, CodeIgniter, Laravel dan MySQL',
+                        ),
+
+                        InfoTile(
+                          icon: Icons.sports_esports,
+                          label: 'Hobi',
+                          value: 'Teknologi, Gaming dan Memancing',
+                        ),
                       ],
                     ),
                   ),
