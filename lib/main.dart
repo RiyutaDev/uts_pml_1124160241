@@ -130,6 +130,11 @@ class ProfilePage extends StatelessWidget {
                           label: 'Email',
                           value: 'rizkirianaputra@gmail.com',
                         ),
+                        InfoTile(
+                          icon: Icons.location_on,
+                          label: 'Alamat',
+                          value: 'Gunung Kidul, Yogyakarta, Indonesia',
+                        ),
 
                         InfoTile(
                           icon: Icons.phone,
