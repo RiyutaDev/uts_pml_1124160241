@@ -155,6 +155,30 @@ class ProfilePage extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
+                // CARD KEAHLIAN DAN HOBI
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Keahlian / Hobi',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+
+                      ],
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
               ],
             ),
           ),
