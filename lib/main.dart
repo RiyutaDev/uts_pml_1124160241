@@ -125,7 +125,29 @@ class ProfilePage extends StatelessWidget {
 
                         SizedBox(height: 10),
 
-                        
+                        InfoTile(
+                          icon: Icons.email,
+                          label: 'Email',
+                          value: 'rizkirianaputra@gmail.com',
+                        ),
+
+                        InfoTile(
+                          icon: Icons.phone,
+                          label: 'Nomor HP',
+                          value: '081283561060',
+                        ),
+
+                        InfoTile(
+                          icon: Icons.school,
+                          label: 'Kelas',
+                          value: 'TI24SESHIFT',
+                        ),
+
+                        InfoTile(
+                          icon: Icons.code,
+                          label: 'GitHub',
+                          value: 'RiyutaDev',
+                        ),
                       ],
                     ),
                   ),
