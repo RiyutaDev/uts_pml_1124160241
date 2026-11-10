@@ -107,6 +107,32 @@ class ProfilePage extends StatelessWidget {
               ),
 
               const SizedBox(height: 25),
+              
+                // CARD KONTAK
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Informasi Kontak',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                        SizedBox(height: 10),
+
+                        
+                      ],
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
               ],
             ),
           ),
