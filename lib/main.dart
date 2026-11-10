@@ -57,10 +57,23 @@ class ProfilePage extends StatelessWidget {
       ),
 
       // BAGIAN BODY
-      body: const Center(
-        child: Text('Halaman Profil Mahasiswa'),
-      ),
+            body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(height: 20),
 
+                const Text('Body Profil'),
+
+                const SizedBox(height: 20),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
