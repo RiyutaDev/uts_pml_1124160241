@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'profile_page.dart';
+import '../models/profile.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -36,10 +37,21 @@ class _LoginPageState extends State<LoginPage> {
       _isLoading = false;
     });
 
-    Navigator.pushReplacement(
+        Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const ProfilePage(),
+        builder: (context) => ProfilePage(
+          profile: Profile(
+            nama: 'Rizki Riana Putra',
+            nim: _nimController.text.trim(),
+            prodi: 'Teknik Informatika Software Engineering',
+            kelas: 'TI24SESHIFT',
+            email: 'rizkirianaptr@gmail.com',
+            noHp: '081283561060',
+            github: 'RiyutaDev',
+            bio: 'Mahasiswa yang tertarik pada teknologi dan pengembangan aplikasi berbasis web.',
+          ),
+        ),
       ),
     );
   }
