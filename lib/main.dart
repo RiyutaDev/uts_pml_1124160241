@@ -61,19 +61,58 @@ class ProfilePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(height: 20),
+            child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+                  const SizedBox(height: 20),
 
-                const Text('Body Profil'),
+              // Foto profil mahasiswa
+              const CircleAvatar(
+                radius: 55,
+                backgroundColor: Colors.teal,
+                child: Icon(
+                  Icons.person,
+                  size: 60,
+                  color: Colors.white,
+                ),
+              ),
 
-                const SizedBox(height: 20),
+              const SizedBox(height: 16),
+
+              // Nama mahasiswa
+              Text(
+                'Rizki Riana Putra',
+                style: Theme.of(context).textTheme.headlineSmall,
+                textAlign: TextAlign.center,
+              ),
+
+              const SizedBox(height: 8),
+
+              // NIM mahasiswa
+              Text(
+                '1124160241',
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+
+              const SizedBox(height: 5),
+
+              // Program studi
+              Text(
+                'Teknik Informatika Software Engineering',
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
+
+              const SizedBox(height: 25),
               ],
             ),
           ),
         ),
       ),
+     ),
     );
   }
 }
