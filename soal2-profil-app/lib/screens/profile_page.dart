@@ -25,6 +25,57 @@ void initState() {
   _profile = widget.profile;
 }
 
+
+Future<void> _editProfile() async {
+  // Membuka halaman Edit Profile dan menunggu hasilnya.
+  final Profile? profileBaru = await Navigator.push<Profile>(
+    context,
+    MaterialPageRoute(
+      builder: (context) => EditProfilePage(
+        profile: _profile,
+      ),
+    ),
+  );
+
+  // Memastikan halaman masih aktif.
+  if (!mounted) return;
+
+  // Memperbarui profil jika pengguna menyimpan perubahan.
+  if (profileBaru != null) {
+    setState(() {
+      _profile = profileBaru;
+    });
+
+    // Menampilkan notifikasi keberhasilan.
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            const Icon(
+              Icons.check_circle,
+              color: Colors.white,
+            ),
+            const SizedBox(width: 12),
+            const Expanded(
+              child: Text(
+                'Profil berhasil diperbarui!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.green.shade700,
+        behavior: SnackBarBehavior.floating,
+        duration: const Duration(seconds: 3),
+      ),
+    );
+  }
+}
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,21 +85,12 @@ appBar: AppBar(
   centerTitle: true,
   actions: [
       IconButton(
-      onPressed: () async {
-        await Navigator.push<Profile>(
-          context,
-          MaterialPageRoute(
-            builder: (context) => EditProfilePage(
-              profile: _profile,
-            ),
-          ),
-        );
-      },
-      tooltip: 'Edit Profil',
-      icon: const Icon(Icons.edit),
-    ),
-  ],
-),
+        onPressed: _editProfile,
+        tooltip: 'Edit Profil',
+        icon: const Icon(Icons.edit),
+      ),
+        ],
+      ),
 
       body: SafeArea(
         child: SingleChildScrollView(
