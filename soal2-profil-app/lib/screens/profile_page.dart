@@ -15,6 +15,15 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  late Profile _profile;
+    @override
+void initState() {
+  super.initState();
+
+  // Mengambil data profil awal dari ProfilePage.
+  _profile = widget.profile;
+}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +56,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            widget.profile.nama,
+                            _profile.nama,
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 22,
@@ -55,12 +64,12 @@ class _ProfilePageState extends State<ProfilePage> {
                             ),
                           ),
                           const SizedBox(height: 6),
-                          Text(widget.profile.nim),
-                          Text(widget.profile.prodi),
-                          Text(widget.profile.kelas),
+                          Text(_profile.nim),
+                          Text(_profile.prodi),
+                          Text(_profile.kelas),
                           const SizedBox(height: 16),
                           Text(
-                            widget.profile.bio,
+                            _profile.bio,
                             textAlign: TextAlign.center,
                           ),
                         ],
