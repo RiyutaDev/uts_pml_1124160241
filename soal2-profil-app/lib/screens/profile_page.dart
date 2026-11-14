@@ -6,8 +6,13 @@ import 'about_page.dart';
 
 class ProfilePage extends StatefulWidget {
   final Profile profile;
+  final ValueChanged<bool> onToggleTheme;
 
-  const ProfilePage({super.key, required this.profile});
+  const ProfilePage({
+    super.key,
+    required this.profile,
+    required this.onToggleTheme,
+  });
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -41,7 +46,7 @@ class _ProfilePageState extends State<ProfilePage> {
         _profile = profileBaru;
       });
 
-      // Menampilkan notifikasi keberhasilan.
+      // Menampilkan notifikasi berhasi
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Row(
@@ -111,6 +116,14 @@ class _ProfilePageState extends State<ProfilePage> {
               onTap: () {
                 Navigator.pop(context);
               },
+            ),
+
+            SwitchListTile(
+              secondary: const Icon(Icons.dark_mode_outlined),
+              title: const Text('Mode Gelap'),
+              subtitle: const Text('Aktifkan tema gelap'),
+              value: Theme.of(context).brightness == Brightness.dark,
+              onChanged: widget.onToggleTheme,
             ),
 
             ListTile(
