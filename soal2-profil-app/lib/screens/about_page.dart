@@ -87,7 +87,28 @@ class AboutPage extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          // Bagian Riwayat Pendidikan ditambahkan pada Tahap 6A.3.
+          // Riwayat Pendidikan
+          Card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(16),
+                  child: Text(
+                    'Riwayat Pendidikan',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ),
+                const InfoTile(
+                  icon: Icons.school,
+                  label: 'Institut Teknologi & Bisnis Bina Sarana Global',
+                  value:
+                      'Teknik Informatika - Software Engineering\n'
+                      'Kelas TI24SESHIFT | Tahun Akademik 2026/2027',
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
