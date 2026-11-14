@@ -27,10 +27,25 @@ void initState() {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Profil Mahasiswa'),
-        centerTitle: true,
-      ),
+      
+appBar: AppBar(
+  title: const Text('Profil Mahasiswa'),
+  centerTitle: true,
+  actions: [
+    IconButton(
+      onPressed: () {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Tombol Edit Profil siap digunakan'),
+          ),
+        );
+      },
+      tooltip: 'Edit Profil',
+      icon: const Icon(Icons.edit),
+    ),
+  ],
+),
+
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(16),
