@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/profile.dart';
 import '../widgets/info_tile.dart';
+import 'edit_profile_page.dart';
 
 class ProfilePage extends StatefulWidget {
   final Profile profile;
@@ -32,11 +33,14 @@ appBar: AppBar(
   title: const Text('Profil Mahasiswa'),
   centerTitle: true,
   actions: [
-    IconButton(
-      onPressed: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Tombol Edit Profil siap digunakan'),
+      IconButton(
+      onPressed: () async {
+        await Navigator.push<Profile>(
+          context,
+          MaterialPageRoute(
+            builder: (context) => EditProfilePage(
+              profile: _profile,
+            ),
           ),
         );
       },
