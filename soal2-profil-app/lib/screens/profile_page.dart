@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/profile.dart';
 import '../widgets/info_tile.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   final Profile profile;
 
   const ProfilePage({
@@ -10,6 +10,11 @@ class ProfilePage extends StatelessWidget {
     required this.profile,
   });
 
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +47,7 @@ class ProfilePage extends StatelessWidget {
                           ),
                           const SizedBox(height: 16),
                           Text(
-                            profile.nama,
+                            widget.profile.nama,
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 22,
@@ -50,12 +55,12 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(height: 6),
-                          Text(profile.nim),
-                          Text(profile.prodi),
-                          Text(profile.kelas),
+                          Text(widget.profile.nim),
+                          Text(widget.profile.prodi),
+                          Text(widget.profile.kelas),
                           const SizedBox(height: 16),
                           Text(
-                            profile.bio,
+                            widget.profile.bio,
                             textAlign: TextAlign.center,
                           ),
                         ],
@@ -82,17 +87,17 @@ class ProfilePage extends StatelessWidget {
                         InfoTile(
                           icon: Icons.email_outlined,
                           label: 'Email',
-                          value: profile.email,
+                          value: widget.profile.email,
                         ),
                         InfoTile(
                           icon: Icons.phone_outlined,
                           label: 'Nomor HP',
-                          value: profile.noHp,
+                          value: widget.profile.noHp,
                         ),
                         InfoTile(
                           icon: Icons.code,
                           label: 'GitHub',
-                          value: profile.github,
+                          value: widget.profile.github,
                         ),
                       ],
                     ),
