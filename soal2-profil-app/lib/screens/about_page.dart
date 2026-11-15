@@ -18,14 +18,19 @@ class AboutPage extends StatelessWidget {
               padding: const EdgeInsets.all(24),
               child: Column(
                 children: [
-                  CircleAvatar(
-                    radius: 45,
-                    backgroundColor: Theme.of(
-                      context,
-                    ).colorScheme.primaryContainer,
-                    child: const Icon(Icons.person, size: 55),
-                  ),
-
+                 ClipRRect(
+                      borderRadius: BorderRadius.circular(16),
+                      child: AspectRatio(
+                        aspectRatio: 777 / 518,
+                        child: Image.asset(
+                          'assets/images/tentang-1.png',
+                          width: double.infinity,
+                          fit: BoxFit.contain,
+                          alignment: Alignment.center,
+                        ),
+                      ),
+                    ),
+                  
                   const SizedBox(height: 16),
 
                   Text(
@@ -104,7 +109,7 @@ class AboutPage extends StatelessWidget {
                   label: 'Institut Teknologi & Bisnis Bina Sarana Global',
                   value:
                       'Teknik Informatika - Software Engineering\n'
-                      'Kelas TI24SESHIFT | Tahun Akademik 2026/2027',
+                      'Kelas TI 24 SE SHIFT | Tahun Masuk 2024 - Saat ini',
                 ),
               ],
             ),

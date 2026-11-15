@@ -156,13 +156,17 @@ class _ProfilePageState extends State<ProfilePage> {
                       padding: const EdgeInsets.all(24),
                       child: Column(
                         children: [
-                          CircleAvatar(
-                            radius: 55,
-                            backgroundColor: Theme.of(
-                              context,
-                            ).colorScheme.primaryContainer,
-                            child: const Icon(Icons.person, size: 65),
-                          ),
+                          ClipOval(
+                              child: SizedBox(
+                                width: 130,
+                                height: 130,
+                                child: Image.asset(
+                                  'assets/images/profile_hammock.png',
+                                  fit: BoxFit.cover,
+                                  alignment: const Alignment(0.15, 0),
+                                ),
+                              ),
+                            ),
                           const SizedBox(height: 16),
                           Text(
                             _profile.nama,
