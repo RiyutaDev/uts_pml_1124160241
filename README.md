@@ -68,7 +68,7 @@ File APK hasil build berada di:
 
 ## Video Presentasi YouTube
 
-**Link video:** _Tambahkan URL video YouTube setelah video diunggah._
+**Link video:** (https://youtu.be/9bZBJ_aKzaI)
 
 ## GitHub
 
